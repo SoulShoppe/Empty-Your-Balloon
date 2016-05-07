@@ -1,10 +1,8 @@
-# PSM Mad Libs 
-
-A test interface for Phenomenal State Machines.
+# Soul Shoppe - Empty Your Balloon 
 
 ## Getting Started
 
-To get you started you can simply clone the PSM Mad Libs repository and install
+To get you started you can simply clone this repository and install
 the dependencies:
 
 ### Prerequisites
