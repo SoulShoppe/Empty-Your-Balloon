@@ -1,0 +1,30 @@
+// ######### Primary CSS For PSM Interface #########
+
+// ## Import ##
+
+@import 'public/css/reset.scss';
+@import 'public/css/open-iconic.scss';
+
+// ## Variables ##
+
+$main-font : Roboto, 'Helvetica Neue', Arial, sans-serif;
+$base-font-size : 1em;
+
+// ## Useful Mixins ##
+
+@mixin css3($property, $value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}#{$property}: $value;
+  }
+}
+
+@mixin border-radius($radius) {
+  @include css3(border-radius,$radius); 
+}
+
+@mixin border-radii($rtl,$rtr,$rbr,$rbl){
+  @include css3(border-top-left-radius,$rtl); 
+  @include css3(border-top-right-radius,$rtr); 
+  @include css3(border-bottom-right-radius,$rbr); 
+  @include css3(border-bottom-left-radius,$rbl); 
+}
