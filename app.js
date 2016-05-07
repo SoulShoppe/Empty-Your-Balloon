@@ -5,7 +5,6 @@ var app = express();
 // ## Local pathname module? ## 
 var path = require('path');
 
-
 // ## SASS Parsing ##
 var sassMiddleware = require('node-sass-middleware');
 app.use(sassMiddleware({
@@ -33,6 +32,7 @@ app.use(sassMiddleware({
 //var compression = require('compression');
 //app.use(compression());
 
+/*
 // ## Parse the bodies of post requests ##
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -181,14 +181,9 @@ var getUserData = function(){
   );
   return output;
 }
+*/
 
-// ## ROUTES ##
-
-// Get new prompt id
-app.get('/new/pid.json',function(req,res, next){ 
-  res.json({"pid":uuid.v4()});
-});
-
+/*
 // Submit log message 
 app.post('/log', function(req,res,next){ 
   var ret = logUserData(req.body.sid,req.body.pid,req.body.data); 
@@ -199,6 +194,15 @@ app.post('/logParser', function(req,res,next){
   var ret = logParserData(req.body.data); 
   res.json({success: ret});
 });
+*/
+
+// ## ROUTES ##
+
+// Get new prompt id
+app.get('/new/pid.json',function(req,res, next){ 
+  res.json({"pid":uuid.v4()});
+});
+
 
 // Static Directories (minification/compression?)
 app.use(express.static('public'));
