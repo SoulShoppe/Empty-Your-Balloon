@@ -1,0 +1,208 @@
+# ROOT
+<application>: <sentence> | <sentence> <additional sentence>
+<additional sentence>: <application>
+<sentence>: <action sentence>. | <question sentence>?
+<action sentence>: <action> | <action> and <additional action>
+<additional action>: <action sentence>
+<action>: <command> | <command with conditions, such as if, when, time, location, data source, duration, while, before, after, in order to, so that> | <command> <unless> | <command with conditions, such as if, when, time, location, data source, duration, while, before, after, in order to, so that> <unless>
+<question sentence>: <question phrase> | <question phrase> and <additional question>
+<additional question>: <question sentence>
+
+# DIRECT ACTIONS
+<command>: I would like for you to <direct actions> | I would like to <direct actions> | I need you to <direct actions> | I want you to <direct actions> | I would like for you to <direct actions> | I would like for you to <direct actions> but do not <direct actions> | I need you to <direct actions> | I want you to <direct actions> but do not <direct actions> | I would like for you to <direct actions> but do not <direct actions> | <direct actions> | do not <direct actions> | I want to know <knowable things> | I would like to know <knowable things>
+<direct actions>: <direct action> | <direct action> and <additional action> | <direct action> or <additional action>
+<direct action>: check and see <knowable things> | track <knowable things> | determine <knowable things> | let me know <knowable things> | tell me <knowable things> | keep track of <knowable things> | remind me to <entity event%conjugation 1> | verify that <statements> | make sure that <statements> | keep <identifier> <objects> <object state> | keep <entity> <entity state> | monitor <identifier> <objects> | monitor <knowable things> | notify me <condition> | <simple actions> | check <online service> | check <identifier> <online service> | check <identifier> <data sources> | check <identifier> <plural updates> | check on <entity> | check on <identifier> <objects> | check <identifier> <objects> | keep track of when <events> | keep track of when <facts> | tell <entity> that <textbox('custom message')> | inform <entity> that <textbox('custom message')> | ensure that <statements> | give me <data sources> | have <identifier> <noun> <simple actions> | have <identifier> <noun> <state phrase> | help me <simple actions> | inform me of <identifier> <plural updates> | inform me of <identifier> <data sources> | offer to <simple actions> | wake <entity> up | cut back on <data sources> by <range(1,1000)> <units> | greet <entity> | decide whether to <simple actions>
+<simple action>: <verb> <identifier> <noun> | <verb> <identifier> <noun> <state phrase>
+<simple actions>: <simple action> | <simple action> and <simple action> | <simple action> or <simple action>
+<additional simple action>: <simple actions>
+<knowable things>: <knowable thing> | <knowable thing> and <additional knowable thing> | <knowable thing> or <additional knowable thing> 
+<knowable thing>: <identifier> <data sources> | <indirect references> | if <statements> | when <statements>
+<additional knowable thing>: <knowable things>
+<verb>: turn | turn on | turn off | lock | unlock | make | play | set | cut on | cut off | dim | brighten | put on | turn up | turn down | stop | finish | access | manage | read aloud | act as | activate | add | adjust | clean | post to | email <entity> | send <entity> | customize | personalize | increase | decrease | boot up | brew | calculate | call <entity> | cancel | change | close | compile | connect to | conserve | contact <entity> | control | cook | cool | keep track of | create | detect | disable | enable | display | allow | feed | draw | drop | lower | find | track | follow | heat | heat up | lose | locate | hold | improve | let | light up | list | log onto | log me out of | look at | look up | lower | raise | maintain | make | vibrate | regulate | monitor | suggest | offer me | open | shut | operate | order me | order | pause | pay | perform | plan | preheat | prepare | program | pull up | put on | raise | randomly turn on | randomly turn off | read me | read | record | reduce | regulate | remember | reply to | report | request | respond to | resume | ring | run | schedule | secure | set | set up | shut down | shut off | shut | sing | sound | soften | start | suggest | tailor | text | track | update | vibrate | warm | warm up | bring up | provide | select | answer | sync | queue up | measure | figure out | dispense | switch | switch off | switch on | crank up | crank down
+<identifier>: the | some | the current | my current | the current | any | a | an | my | my favorite | all | <location> | each | every | one of my | one of the | our | his | hers | their | important | the next | my next | new | this | that
+<nouns>: <noun> | <noun> and <additional noun> | <noun> or <additional noun>
+<additional noun>: <nouns>
+<noun>: <objects> | <objects> <description>
+<music>: music | music by <textbox('artist')> | <textbox('genre')> music | background music
+<song>: song | song by <textbox('artist')> | song <textbox('song title')> | song <textbox('song title')> by <textbox('artist')>
+<album>: album <textbox('album')> | album <textbox('album')> by <textbox('artist')> | album by <textbox('artist')>
+<playlist>: playlist <textbox('playlist name')> | <textbox('description or name')> playlist
+<television>: television | movie | movies | video | videos | show | shows | <textbox('film genre')> | <textbox('film genre')> movie | <textbox('TV show genre')> show | <textbox('TV show')> | <textbox('movie title')>
+<location>: <identifier> <space> | inside | outside | school | work
+<space>: room | house | living room | bathroom | bedroom | master bedroom | rooms | garage | yard | kitchen | home | school | office | work | door | outside | inside | guest bedroom | guest bathroom | dining room | attic | cellar | basement | foyer | parlor | closet | den | porch | hall | family room | library | nursery | garden | mud room | gym | game room | laundry room | pantry | sunroom | washroom | household
+<activity>: cooking | cooking <meal> | sleeping | showering | exercising | working out | getting dressed | coming home | working | driving | leaving | getting ready | reading | doing homework | preparing <meal> | <identifier> morning routine
+<entity>: I | people | they | <identifier> kids | <identifier> children | we | my pets | my pet | my husband | my wife | my boyfriend | my girlfriend | my sister | my sisters | my brother | my brothers | my mother | my father | you | someone | someone else | no one | nobody | <identifier> stranger | an unidentified person | anyone | <identifier> dog | <identifier> cat | them | he | she | him | her | us | me | <identifier> friends | <identifier> fish | my family | <textbox('custom name')> | my parents | my in-laws | everyone
+<utility>: energy | electricity | power | water | gas | utility
+<meal>: breakfast | lunch | dinner
+
+# ATTRIBUTES
+<states>: <state phrase> | <state phrase> and <additional state>
+<additional state>: <states>
+<state phrase>: to <object state> | at <object state> | of <data sources> | that says <textbox('custom message')> | to <entity> that says <textbox('custom message')> | to say <textbox('custom message')> | <object state> | to <entity> | to my <personal organizers>
+<color>: <base color> | warm <base color> | cool <base color> | bright <base color> | light <base color> | hot <base color> | dark <base color> | cold <base color> | <textbox('custom color')>
+<base color>: red | pink | salmon | orange | yellow | green | teal | aqua | blue | purple | pink | white | gold
+<power>: <step> power | <step> brightness | <percent> power | <percent> brightness | dim | bright
+<step>: low | mid | high | full | half | medium
+<percent>: <range(0,100)>%
+<volume>: <step> volume | <percent> volume
+<temperature>: warm | cool | hot | cold | <degrees f> degrees Fahrenheit | <degrees c> degrees Celsius | optimal temperatures
+<degrees f>: <range(55,90)> 
+<degrees c>: <range(13,32)>
+<units>: dollars | watts | gallons | steps | calories | pounds | beats per minute | minutes | hours | days | percent | degrees | levels
+
+# CONDITIONS
+<command with conditions, such as if, when, time, location, data source, duration, while, before, after, in order to, so that>: <command> <condition> | <condition> <command> | 
+<condition>: if <statements> | when <statements> | <dependent clauses>
+<dependent clause>: <while> | <time dependency> | <location dependency> | <before> | <after> | <based on> | <until> | <goal dependency>
+<dependent clauses>: <dependent clause> | <dependent clause> and <additional dependency> | <dependent clause> or <additional dependency>
+<additional dependency>: <dependent clauses>
+<statements>: <statement> | <statement> and <additional statement> | <statement> or <additional statement>
+<additional statement>: <statements>
+<statement>: <fact> | <event> | <fact> <dependent clauses> | <event> <dependent clauses>
+<facts>: <fact> | <fact> and <additional fact> | <fact> or <additional fact>
+<additional fact>: <facts>
+<events>: <event> | <event> and <additional event> | <event> and <additional event>
+<additional event>: <events>
+
+# FACTS 
+<fact>: <entity fact> | <environment fact> | <update fact> | <object fact> | <data fact>
+<entity fact>: I am <entity state> | we are <entity state> | you are <entity state> | someone is <entity state> | someone else is <entity state> | no one is <entity state> | nobody is <entity state> | they are <entity state> | <identifier> pets are <entity state> | a stranger is <entity state> | an unidentified person is <entity state> | anyone is <entity state> | the dog is <entity state> | the cat is <entity state> | she is <entity state> | he is <entity state> | everyone is <entity state> | <entity%conjugation 1> need to <entity event%conjugation 1> | <entity%conjugation 2> needs to <entity event%conjugation 1> | <entity%conjugation 1> want to <entity event%conjugation 1> | <entity%conjugation 2> wants to <entity event%conjugation 1> | <entity> should <entity event%conjugation 1> | I am not <entity state> | we are not <entity state> | you are not <entity state> | someone is not <entity state> | someone else is not <entity state> | they are not <entity state> | <identifier> pets are not <entity state> | a stranger is not <entity state> | an unidentified person is not <entity state> | anyone is not <entity state> | the dog is not <entity state> | the cat is not <entity state> | she is not <entity state> | he is not <entity state> | everyone is not <entity state> | <entity%conjugation 1> do not need to <entity event%conjugation 1> | <entity%conjugation 2> does not need to <entity event%conjugation 1> | <entity%conjugation 1> do not want to <entity event%conjugation 1> | <entity%conjugation 2> does not want to <entity event%conjugation 1> | <entity> should not <entity event%conjugation 1>
+<entity state>: home | in <identifier> <location> | at the door | present | anywhere in <identifier> <location> | not home | not at home | away from home | away | gone | out of the house | <range(2,60)> minutes from returning home | close to returning home | coming home from work | coming home | about to enter | entering <identifier> <location> | nearby | leaving | leaving <identifier> <location> | approaching <identifier> <location> | leaving for work | ready to go to work | ready to leave | awake | about to go to sleep | asleep | asleep at night | sleeping | anxious | feeling down | being unhealthy | hungry | bored | calm | happy | unhappy | sad | upset | healthy | unhealthy | getting healthier | sleep deprived | in the mood for it | hot | cold | going out to exercise | cooling down | approaching the car | driving | low on gas | driving dangerously | looking for it | not | done | done with <meal> | finished <activity> | available | beginning to overuse <utility> | late for work | in need of a cab | due | too far from home | moving too fast | on the couch | ready to come inside | outside | ready to go out | having a party | having company over
+
+<environment fact>: it is <environment state> | it is not <environment state>
+<environment state>: <clock time> | after <clock time> | before <clock time> | below <degrees f> degrees Fahrenheit |  below <degrees c> degrees Celsius | cool enough | warm enough | too warm | too cold | too hot | from work | from <entity> | hot | cold | raining | bright out | sunny out | snowing | winter | summer | on | off | daytime | night out | morning | afternoon | evening | sunrise | sunset | dinner | lunch | breakfast
+
+<update fact>: there are <identifier> <plural updates> | there are <identifier> <plural updates> from <entity> | there are <identifier> <plural updates> from <online service> | there are <identifier> <plural updates> from work | there is <identifier> <singular update> | there is anything | there is <identifier> <singular update> from <entity> | there is anything from <entity> | there is <identifier> <singular update> from <online service> | there is anything from <online service> | there is <identifier> <singular update> from work | there is anything from work | there are no <plural updates> | there are no <plural updates> from <entity> | there are no <plural updates> from <online service> | there are no <plural updates> from work | there is no <singular update> | there is nothing | there is no <singular update> from <entity> | there is nothing from <entity> | there is no <singular update> from <online service> | there is nothing from <online service> | there is no <singular update> from work | there is nothing from work
+<plural updates>: transportation alerts | updates on the forecast | weather alerts | emails | new emails | email notifications | messages | new messages | important messages | message notifications | text messages | phone calls | alerts | notifications | updates | <online service> messages | new <online service> messages | <online service> alerts | <online service> updates | social media alerts | social media updates | news alerts | news updates | new voicemails | voicemails | chat messages | texts | suggestions | things
+<singular update>: message | new message | text message | new text message | email | new email | mail | new mail | alert | update | phone call | notification | voicemail | physical mail
+<online service>: Facebook | Twitter | YouTube | Reddit | Pinterest | Foursquare | Instagram | Evernote | Dropbox | Campfire | Slack | Google Drive | Calendar | Gmail | Uber | Lyft | the public transit authority | the news | my RSS feeds | my social networks | my social network accounts | my Facebook page | my email
+
+<object fact>: <identifier> <objects> <relation> <object state>
+<objects>: <object> | <object> and <additional object> | <object> or <additional object>
+<additional object>: <objects>
+<object>: appliance | appliances | plumbing | bus | mail | sun | electricity | energy | water | gas | washer | washing machine | utilities | dryer | coffee | coffee maker | coffee pot | lights | light | door | doors | windows | window | weather | water heater | heat | heater | air | air conditioning | air conditioner | car | objects | <location> | motion sensors | <playlist> | TV | game | blinds | alarm | phone | lighting | oven | breakfast | lunch | dinner | system | speakers | power | devices | computer | shower | sensors | traffic | stereo | radio | outlets | groceries | ingredients | food | electronics | bills | costs | workout | watch | refrigerator | fan | fans | dishwasher | TV remote | remote control | keys | car keys | purse | pizza | wine | beer | garage door | doorbell | storm | something unusual | something | medication | stove | clock | items | smartphone | clothes | tracker | things | anything | door lock | door locks | outlet | thermostat | glucose monitor | EEG headset | blood pressure monitor | heart rate monitor | <music> | <song> | <album> | lock | locks | <television> | temperature | temperatures | recipe | workout routine | media | news | local news | world news | <online service> | results | command | appointment | appointments | channel | security alarm | it | <textbox('custom station')> radio station | home | ways to reduce costs | intrusion detection system | security system | security lockdown | commute | podcast | laundry | dry cleaning | babysitter | meeting | Facebook status | energy efficiency | music library | video library | media library
+<relation>: is | is not | are | are not | has | does not have | have | do not have | have been | have not been | was | were | was not | were not |  is estimated to be | is forecast to be | are estimated to be | are forecast to be | seems to be | can be | need to be | is set at | is not estimated to be | is not forecast to be | are not estimated to be | are not forecast to be | does not seem to be | cannot be | does not need to be | is not set at 
+
+<object state>: in use | not in use | broken | on | off | <range(2,60)> minutes away | near | arrived | occupied | unoccupied | out | not out | warm | cool | cold | hot | done | finished | ready | locked | unlocked | not locked | opened | closed | open | unusually high | high | running low | too high | too low | below <degrees c> degrees Celsius | below <degrees f> degrees Fahrenheit | above <degrees c> degrees Celsius | above <degrees f> degrees Fahrenheit | nice | good | bad | problems | about to come on | moved | activated | playing | quiet | loud | paused | running | up | down | ringing | bright | dim | <color> | enabled | disabled | tailored to my needs | tailored to my preferences | available | playing | possible | lost | located | arriving | late | here | recorded | prepared | turned on | turned down | turned off | paid | is over | needs maintenance | secure | drawing power | not drawing power | taken | above-freezing temperatures | clean | dirty | updated | scheduled | <color> | <power> | <volume> | <temperature> | my preferred settings | a predefined setting | secure | secured | energy efficient | automated | <range(0,1000)>
+
+<data fact>: <identifier> <data sources> <relation> <data state>
+<data sources>: <data> | <data> and <additional data>
+<additional data>: <data sources>  
+<data>: energy consumption | electricity usage | water usage | gas usage | utility usage | weight | heart rate | blood pressure | blood sugar | temperature | humidity | motion | movement | step count | mood | health | habits | fitness | calories | daily caloric intake | quality of sleep | sleep duration | weather forecast | weather status | weather | traffic conditions | road conditions | <utility> bill | costs | currently available ingredients | mood | top news on <online service> | trending content on <online service> | preferences | schedule | to-do list | grocery list | lists | daily reminders | suggestions | muscle mass | blood glucose | brain waves | activities | number | amount | patterns | things | anything
+<data state>: unusually high | high | low | good | bad | too high | too low | decreasing | increasing | changing | improving | getting worse | sunny | cloudy | rainy | snowy | cold | warm | hot | cool | new | funny | unusual | busy | free | at its limit
+<personal organizers>: calendar | Google Calendar | schedule | to-do list | grocery list | lists | daily reminders | preferences
+
+# EVENTS - when | if | whenever | as | as soon as | --- must be followed by location - a room | the garage | the yard | the kitchen | the house the home | my home | for school | for work | school | work | at school | at work | at the door | the door | in | out | away | from outside | etc -- also time -- today | in the winter | at night
+<event>: <entity event> | <environment event> | <update event> | <object event> | <data event>
+<entity event>: <entity%conjugation 1> <entity event%conjugation 1> | <entity%conjugation 2> <entity event%conjugation 2>
+<entity%conjugation 1>: I | people | they | <identifier> kids | <identifier> children | we | my pets | my sisters | my brothers | you | <identifier> friends | my parents | my in-laws
+<entity event%conjugation 1>: approach | enter | leave | return | get ready to leave | left | walk in | walk into | walk out of | walk through | move through | come in | get home | will be home | come home from being | wake up | go to sleep | appear to be waking up | begin feeling drowsy | fall asleep | get in bed | awake | awaken | get into bed | get up | go to bed | got to sleep | sleep | got enough sleep | walk away | arrive home | come back home | come home | get home | get off work | ask you to | command them to | say so | tell you to | send <entity> a message saying that <textbox('custom')> | say <textbox('custom')> | consume <identifier> <objects> | eat | eat <meal> | eat <range(0,3000)> calories | exercise | forget | get <identifier> <singular update> | get <identifier> <plural updates> | receive <identifier> <plural updates> | receive  <identifier> <singular update> | lose <identifier> <nouns> | lost <identifier> <nouns> | accidentally leave <identifier> <objects> <object state> | finish <activity> | start <activity> | finish <meal> | start <meal> | access the Internet | put <entity> out in the yard | cut back on <data sources> by <range(1,100)> <units> | cut back on <activity> by <range(1,100)> <units> | gain more than <range(1,30)> pounds of fat | walk <range(0,30000,100)> steps | <simple actions> | knock | wander off | do not respond | fall and seem unable to stand | cancel | do something else | go grocery shopping | go to the store | pick up food for <meal> | maintain my current weight | listen to <identifier> <music> | watch <identifier> <television> | have <identifier> <objects> | get gas | do something healthy
+
+<entity%conjugation 2>: my husband | my wife | my boyfriend | my girlfriend | my sister | my brother | my mother | my father | someone | someone else | no one | nobody | <identifier> stranger | an unidentified person | anyone | <identifier> dog | <identifier> cat | he | she | my pet | anyone | my family | everyone | <textbox('custom name')>
+<entity event%conjugation 2>: approaches | enters | leaves | returns | gets ready to leave | left | walks in | walks into | walks out of | walks through | moves through | comes in | gets home | will be home | comes home from being | wakes up | goes to sleep | appears to be waking up | begins feeling drowsy | falls asleep | gets in bed | awakens | gets into bed | gets up | goes to bed | went to sleep | sleeps | got enough sleep | walks away | arrives home | comes back home | comes home | gets home | gets off work | asks you to | commands them to | says so | tells you to | sends you a message saying that <textbox('custom')> | says <textbox('custom')> | consumes <identifier> <objects> | eats | eats <meal> | eats <range(0,3000)> calories | exercises | forgets | gets <identifier> <singular update> | gets <identifier> <plural updates> | receives <identifier> <plural updates> | receives  <identifier> <singular update> | loses <identifier> <nouns> | lost <identifier> <nouns> | accidentally leaves <identifier> <objects> <object state> | finishes <activity> | starts <activity> | finishes <meal> | starts <meal> | accesses the Internet | puts <entity> out in the yard | cuts back on <data sources> by <range(1,100)> <units> | cuts back on <activity> by <range(1,100)> <units> | gains more than <range(1,30)> pounds of fat | walks <range(0,30000,100)> steps | locks <identifier> <nouns> | opens <identifier> <nouns> | closes <identifier> <nouns> | turns on <identifier> <nouns> | turns off <identifier> <nouns> | knocks | wanders off | does not respond | touches my car | falls and is unable to stand | cancels | does something else | goes grocery shopping | goes to the store | picks up food for <meal> | maintains their current weight | listens to <identifier> <music> | watches <identifier> <television> | has <identifier> <objects> | gets gas | does something healthy
+
+<environment event>: it <environment change>
+<environment change>: gets dark | starts to get dark | reaches that temperature | is happening | gets below <degrees c> degrees Celsius | gets below <degrees f> degrees Fahrenheit | drops below <degrees c> degrees Celsius | drops below <degrees f> degrees Fahrenheit | falls below <degrees f> degrees Fahrenheit | falls below <degrees c> degrees Celsius | goes above <degrees f> degrees Fahrenheit | goes above <degrees c> degrees Celsius | gets too cold | gets too hot
+
+<update event>: I have <updates> | they have <updates> | <identifier> kids have <updates> | we have <updates> | my boyfriend has <updates> | my husband has <updates> | my sister has <updates> | somebody has <updates>
+<updates>: <singular update> | <plural updates> | <range(2,60)> minutes until the bus arrives
+
+<object event>: <identifier> <objects> <object behavior> | <identifier> <singular update> <object behavior> 
+<object behavior>: goes off | go off | comes | opens | closes | open | close | shut | are opened | are closed | are shut | is over | finish | finishes | end | ends | start | starts | ring | rings | <environment event> | turn on | turn off | turns on | turns off | comes in | comes on | pops up | comes through | is moved | is broken into | happen | happens | change | changes | stays <object state>
+
+<data event>: <identifier> <data sources> <data behavior>
+<data behavior>: rises above <percent> | goes over <range(2,1000)> <units> | gets high | gets low | gets unusually high | gets unusually low | looks good | looks bad | gets too high | gets too low | decreases | increases | changes | improves | gets worse | varies an unusual amount | reaches its limit | rise above <percent> | go over <range(2,1000)> <units> | get high | get low | get unusually high | get unusually low | look good | look bad | get too high | get too low | decrease | increase | change | improve | gets worse | vary an unusual amount | reach their limit
+
+
+# QUESTIONS
+<question phrase>: <question> | <question> <dependent clauses>
+<question>: <question about entity> | <question about object> | <question about update> | <question about environment> | <question about data> | <how question> | <what question> | <when question> | <where question> | <who question>
+<question about entity>: are <entity> <entity state> | is <entity> <entity state> | am I <entity state>
+<question about environment>: is it <environment state>
+<question about update>: are there <identifier> <plural updates> | are there <identifier> <plural updates> from <entity> | are there <identifier> <plural updates> from work | are there <identifier> <plural updates> from <online service> | is there <identifier> <singular update> | is there <identifier> <singular update> from <entity> | is there <identifier> <singular update> from work | is there <identifier> <singular update> from <online service>
+<question about object>: are <identifier> <objects> <object state> | is <identifier> <objects> <object state> | have <identifier> <objects> been <object state> | has <identifier> <objects> been <object state> | was <identifier> <objects> <object state> | were <identifier> <objects> <object state> |  are <identifier> <objects> forecast to be <object state> | is <identifier> <objects> forecast to be <object state>
+<question about data>: is <identifier> <data sources> <data state> | are <identifier> <data sources> <data state> 
+<how question>: how anxious am I | how dirty is the house | how hot is it | how am <how am> | how high <how high> | how is <how is> | how did <how did> | how well <how well> | how are <how are> | how can <entity> <how can entity> | how long <how long> | how many <how many> | how much <how much> | how far <how far> | how fast <how fast>
+<how am>: <entity> feeling | <entity> doing | <entity>
+<how high>: is <identifier> blood sugar | is <identifier> blood pressure | is <identifier> heart rate
+<how is>: the traffic | the weather | my blood sugar | my exercise program going | my heart rate | my blood pressure | my progress towards my weight goal | the stock market | <entity>
+<how did>: I sleep last night
+<how well>: have I been working out | have I been sleeping | did I sleep last night
+<how are>: my vitals | you | <entity>
+<how can entity>: reduce <identifier> utility bills | conserve energy | conserve water | conserve gas | conserve electricity | conserve resources | reduce <identifier> utility usage | be healthier | cook a particular meal | improve <identifier> sleeping habits | reduce <identifier> costs | save money on utilities
+<how long>: have my washer and dryer been running | long will the commute be
+<how many>: calories have I burned | calories do I need to eat | minutes do I need to exercise | steps have I taken | steps do I need to take
+<how much>: do I weigh | am I exercising right now | energy <relation> <identifier> <objects> consuming | exercise did <entity> do | exercise have I done |  exercise has <entity> done | should <entity> exercise | have I exercised historically | sleep did <entity> get | sleep do I get | traffic is there | does electricity cost | does gas cost | does water cost | money can I save if I <direct action> | money would I save if I <event> | money is in my bank account | will my bills be | am I using of each utility | will my electricity cost | does each utility cost | energy do <identifier> <objects> consume | energy does <identifier> <objects> consume |  electricity <relation> <identifier> <objects> consuming | electricity have appliances used | electricity am I using | electricity do <entity> consume | electricity does <entity> consume |  electricity have <entity> used | electricity has <entity> used | am I spending | could I save by reducing water consumption | could I save by reducing electricity consumption | could I save by reducing gas consumption | water do <entity> use | am I paying for electricity | am I paying for water | am I paying for gas | am I paying for utilities
+<how far>: did I travel
+<how fast>: is <identifier> heart beating | is <identifier> car going
+<what question>: what <objects> <relation> <object state> | what is <identifier> <data sources> | what are <identifier> <data sources> | what color are the lights | what color is the light | what is new on <online service> | what is new on TV
+<when question>: when do <entity> need to <entity event> | when does <entity> need to <entity event> | when is <entity> <entity state> | when are <entity> <entity state> | when will <entity> <entity event> | when will <entity> be <entity state> | when did <entity> <event> | when was <entity> <entity fact> | when were <entity> <entity fact> | when do <identifier> <objects> need to <object event> | when does <identifier> <objects> need to <object event> | when is <identifier> <objects> <object state> | when are <identifier> <objects> <object state> | when will <identifier> <objects> <object event> | when will <identifier> <objects> be <object state> | when did <identifier> <objects> <object event> | when was <identifier> <objects> <object fact> | when were <identifier> <objects> <object fact>
+<where question>: where are <entity> | where is <entity> | where was <entity> | where were <entity> | where is <identifier> <objects>
+<who question>: who is <entity state> | who are my new messages from | who has a birthday
+
+
+# INDIRECT QUESTIONS
+<indirect references>: <indirect reference phrase> | <indirect reference phrase> and <additional indirect question>
+<additional indirect question>: <indirect references>
+<indirect reference phrase>: <indirect reference> | <indirect reference> <dependent clauses>
+<indirect reference>: what <options for what> | what <identifier> <options for what identifier> | what the <options for what the> | what I <options for what I> | what is <options for what is> | how <options for how> | how I | how long <options for how long> | how many <options for how many> | how much <options for how much> | how much electricity <options for how much electricity>  | how much I <options for how much I> | how to <options for how to>  | when <when reference> | where <where reference> | who <who reference> | whether <whether reference>
+<options for what>: <object> <relation> <object state> | channels I subscribe to that have uploaded videos | email I have | exercising I have done recently | genre I am feeling that day | options we have | maintenance needs doing in my house | moods most negatively impact my habits | movie they were in together | recipes I can make with the available ingredients | state of mind I am currently in | they need | time my next appointment is | time of day is using the most <utility> | to buy | to prepare for <meal> | to record for me | to wear | uses the most <utility> | to do
+<options for what identifier>: <data sources> is | <data sources> is for <entity> | exercise program is | mood is | <entity> does during the day | <entity> do during the day | <entity> is doing | <entity> are doing
+<options for what the>: forecast is | humidity is | perfect temperature is for my body temperature | temperature is | weather is | weather is going to be like | weather will be like
+<options for what I>: weigh | am doing | can cook | eat | have on my schedule | have used up in the pantry | like | might need to get at the store | say I am going to do | want | watch on TV
+<options for what is>: causing illness | in my refrigerator for me to eat | in the refrigerator | new on <online service> | out of stock
+<options for how>: anxious I am feeling right now | cold and hot it is | dirty the house is | fast it is going | he is doing | high my my blood sugar is | my heart rate is | hot it is in the room | the traffic is | the weather will be today | well I have been working out the last week | well I sleep
+<options for how I>: am feeling | can reduce my utility bills | feel | slept last night | long I have left on my washer and dryer
+<options for how long>: the commute will be
+<options for how many>: calories I've burned | calories I need to eat today after my exercise routine | minutes I need to exercise on my elliptical to eat three pieces of pepperoni pizza | steps I've taken | steps I've walked in a day | steps I've taken through my day | steps I must take today if I eat 1500 calories and want to maintain my current weight
+<options for how much>: am I exercising right now | are they currently consuming | energy | exercise I did this week | exercise I have done total | gas it is consuming | it costs | money I can save | money is in my bank account | my total bills will be this month | of each utility I am using at any given time | the cost of my electricity will be so far this month | water and electricity I am using | water and gas that I am using
+<options for how much electricity>: gas and water is being consumed currently/is currently in use | water and gas cost | all the appliances consume | they are currently using | appliances have used | I am using | I am using in my home | I consume | I have used this month | I used | is being used
+<options for how much I>: weigh | am spending every month | could save at slightly reduced levels | currently weigh | have exercised historically | sleep | slept | will be spending at current levels of electricity/heating/etc
+<options for how to>: be healthier | clean | cook a certain recipe | improve my sleeping habits | make a particular meal | reduce cost | save money on <utility> usage in my home
+<when reference>: <statements>
+<where reference>: <entity%conjugation 2> is | I am | <entity%conjugation 1> are  | it is | <identifier> <objects> are | <identifier> <objects> is 
+<who reference>: is <entity state> | was <entity state>
+<whether reference>: <statements>
+
+### DEPENDENCY CLAUSES
+
+# WHILE - facts
+<while>: while <facts>
+
+# BEFORE if I am not home before dark
+<before>: before <events> | before <time> | <range(1,60)> <time unit> before <events> | <range(1,60)> <time unit> before <time>
+
+# AFTER
+<after>: after <events> | after <time> | <range(1,60)> <time unit> after <events> | <range(1,60)> <time unit> after <time>
+
+# UNTIL - applies to action sets?
+<until>: until <statements> | until <time> | for <range(1,60)> <time unit>
+
+# UNLESS - applies to action sets?
+<unless>: unless <statements>
+
+# GOAL DEPENDENCY
+<goal dependency>: in order to lose weight | in order to save money | in order to catch the bus | in order to <textbox('custom goal')> | so that <textbox('custom reason')> | for me to review
+
+# DESCRIPTION DEPENDENCY (for nouns only)
+<description>: that <relation> <object state> | that I am in | that <entity> <entity criteria> | 
+<entity criteria>: have left <object state> | has left <object state> | like | likes | enjoy | enjoys | suggest | suggests | specify | specifies | might like | would use | have lost | have forgotten | has lost | has forgotten | need | needs
+
+# LOCATION DEPENDENCY
+<location dependency>: <location phrase> | <location phrase> or <additional location> | <location phrase> and <additional location>
+<location phrase>: in <location> | in <location> that <entity> in | in <location> that is <location attribute> | in <location> that are <location attribute> | in <identifier> <location attribute> <space> | to | for | in | out | at <location> | from <location> | for <location>
+<location attribute>: occupied | unoccupied | hot | cold | warm | bright | dark | quiet | loud | nearby
+<additional location>: <location dependency>
+
+# TIME DEPENDENCY
+<time dependency>: <time> | <time> and <additional time> 
+<additional time>: <time dependency>
+<time>: tonight | today | tomorrow | this <time unit> | at night | during the <time unit> | at that time | at <clock time> | next <time unit> | daily | nightly | weekly | monthly | yearly | for today | for tomorrow | for <identifier> <time unit> | for <clock time> | right now | every <time unit> | each <time unit> | last <time unit> | sunrise | sunset | in <range(1,60)> <time unit> | dinnertime | lunchtime | breakfast | dark | at certain times | dusk | currently | in <season>
+<time unit>: morning | afternoon | evening | week | month | year | day | night | second | minute | hour | seconds | minutes | hours | days | weeks | months | years | <season>
+<season>: winter | spring | summer | fall
+<clock time>: <time()> a.m. | <time()> p.m.
+
+# SOURCE DEPENDENCY
+<based on>: based on <source>
+<source>: <indirect reference> | <identifier> <data sources> | <identifier> <data sources> and <additional source> | <indirect reference> and <additional source> | <indirect reference> or <additional source> | <indirect reference> but not <additional source> | <identifier> <data sources> or <additional source> | <identifier> <data sources> but not <additional source> 
+<additional source>: <source>

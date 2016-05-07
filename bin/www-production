@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+var respawn = require('respawn'); 
+var log = require('simple-node-logger').createSimpleLogger('production-run.log');
+
+var proc = respawn(['node', 'bin/www'], {
+  env: {PORT: 80}, 
+  cwd: '.',
+  maxRestarts: 60,
+  sleep: 1000,
+});
+
+proc.on('spawn', function () {
+  log.log('info','The PSM Server started...');
+});
+
+proc.on('exit', function (code, signal) {
+  log.log('fatal','process exited, code: ' + code + ' signal: ' + signal);
+});
+
+proc.on('stdout', function (data) {
+  log.log('info',data);
+});
+
+proc.on('stderr', function (data) {
+  log.log('error', data);
+});
+
+proc.start();

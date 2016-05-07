@@ -1,0 +1,1867 @@
+<action sentence> = <action>
+                  | <action> and <additional action>
+
+
+<action> = <command with conditions, such as: if, when, time, location, after...>
+         | <command>
+
+
+<activity> = <identifier> morning routine
+           | accomplishing my goals
+           | coming home
+           | cooking
+           | cooking <meal>
+           | doing homework
+           | doing work
+           | driving
+           | eating
+           | exercising
+           | following my schedule
+           | getting dressed
+           | getting ready
+           | leaving
+           | preparing <meal>
+           | reading
+           | relaxing
+           | showering
+           | sleeping
+           | taking care of myself
+           | working
+           | working out
+
+
+<additional action> = <action sentence>
+
+
+<additional data> = <data sources>
+
+
+<additional dependency> = <dependent clauses, such as: time, location, after>
+
+
+<additional event> = <events>
+
+
+<additional fact> = <facts>
+
+
+<additional indirect question> = <indirect references, such as: what, when, where, whether>
+
+
+<additional knowable thing> = <knowable things>
+
+
+<additional location> = <location dependency>
+
+
+<additional noun> = <nouns>
+
+
+<additional object> = <objects>
+
+
+<additional question> = <question sentence>
+
+
+<additional sentence> = <application>
+
+
+<additional simple action> = <simple actions>
+
+
+<additional source> = <source>
+
+
+<additional state> = <states>
+
+
+<additional statement> = <statements>
+
+
+<additional time> = <time dependency>
+
+
+<after> = <range(1,60)> <time unit> after <events>
+        | <range(1,60)> <time unit> after <time>
+        | after <events>
+        | after <time>
+
+
+<album> = album <textbox('album')>
+        | album <textbox('album')> by <textbox('artist')>
+        | album by <textbox('artist')>
+
+
+<application> = <sentence>
+              | <sentence> <additional sentence>
+
+
+<base color> = aqua
+             | blue
+             | gold
+             | green
+             | orange
+             | pink
+             | purple
+             | red
+             | salmon
+             | teal
+             | white
+             | yellow
+
+
+<based on> = based on <source>
+
+
+<before> = <range(1,60)> <time unit> before <events>
+         | <range(1,60)> <time unit> before <time>
+         | before <events>
+         | before <time>
+
+
+<clock time> = <time()>
+
+
+<color> = <base color>
+        | <textbox('custom color')>
+        | bright <base color>
+        | cold <base color>
+        | cool <base color>
+        | dark <base color>
+        | hot <base color>
+        | light <base color>
+        | warm <base color>
+
+
+<command with conditions, such as: if, when, time, location, after...> = <command> <condition>
+                                                                                                                             | <condition> <command>
+
+
+<command> = <direct actions>
+          | I need you to <direct actions>
+          | I want to know <knowable things>
+          | I want you to <direct actions>
+          | I would like for you to <direct actions>
+          | I would like to <direct actions>
+          | I would like to know <knowable things>
+
+
+<condition> = <dependent clauses, such as: time, location, after>
+            | if <event>
+            | if <event> <dependent clauses, such as: time, location, after>
+            | when <event>
+            | when <event> <dependent clauses, such as: time, location, after>
+
+
+<data behavior> = change
+                | changes
+                | decrease
+                | decreases
+                | get high
+                | get low
+                | get too high
+                | get too low
+                | get unusually high
+                | get unusually low
+                | gets high
+                | gets low
+                | gets too high
+                | gets too low
+                | gets unusually high
+                | gets unusually low
+                | gets worse
+                | go over <range(2,1000)> <units>
+                | goes over <range(2,1000)> <units>
+                | improve
+                | improves
+                | increase
+                | increases
+                | look bad
+                | look good
+                | looks bad
+                | looks good
+                | reach their limit
+                | reaches its limit
+                | rise above <percent>
+                | rises above <percent>
+                | varies an unusual amount
+                | vary an unusual amount
+
+
+<data event> = <identifier> <data sources> <data behavior>
+
+
+<data fact> = <identifier> <data sources> <relation> <data state>
+
+
+<data sources> = <data>
+               | <data> and <additional data>
+
+
+<data state> = at its limit
+             | bad
+             | busy
+             | changing
+             | cloudy
+             | cold
+             | cool
+             | decreasing
+             | free
+             | funny
+             | getting worse
+             | good
+             | high
+             | hot
+             | improving
+             | increasing
+             | low
+             | new
+             | rainy
+             | snowy
+             | sunny
+             | too high
+             | too low
+             | unusual
+             | unusually high
+             | warm
+
+
+<data> = <utility> bill
+       | activities
+       | amount
+       | anything
+       | blood glucose
+       | blood pressure
+       | blood sugar
+       | brain waves
+       | calories
+       | costs
+       | currently available ingredients
+       | daily caloric intake
+       | daily reminders
+       | electricity usage
+       | energy consumption
+       | fitness
+       | gas usage
+       | grocery list
+       | habits
+       | health
+       | heart rate
+       | humidity
+       | lists
+       | mood
+       | motion
+       | movement
+       | muscle mass
+       | number
+       | patterns
+       | preferences
+       | quality of sleep
+       | road conditions
+       | schedule
+       | sleep duration
+       | step count
+       | suggestions
+       | temperature
+       | things
+       | to-do list
+       | top news on <online service>
+       | traffic conditions
+       | trending content on <online service>
+       | utility usage
+       | water usage
+       | weather
+       | weather forecast
+       | weather status
+       | weight
+
+
+<degrees c> = <range(13,32)>
+
+
+<degrees f> = <range(55,90)>
+
+
+<dependent clause> = <location dependency>
+                   | <time dependency>
+                   | <while>
+
+
+<dependent clauses, such as: time, location, after> = <dependent clause>
+                                                              | <dependent clause> <additional dependency>
+                                                              | <dependent clause> and <additional dependency>
+
+
+<description> = that <entity> <entity criteria>
+              | that <relation> <object state>
+              | that I am in
+
+
+<direct action> = <simple actions>
+                | check <identifier> <objects>
+                | check and see <knowable things>
+                | check on <identifier> <objects>
+                | determine <knowable things>
+                | greet <entity>
+                | have <identifier> <objects> <simple actions>
+                | have <identifier> <objects> <state phrase>
+                | help me <simple actions>
+                | inform <entity> that <textbox('custom message')>
+                | keep track of <knowable things>
+                | keep track of when <events>
+                | keep track of when <facts>
+                | let me know <knowable things>
+                | make sure that <statements>
+                | monitor <identifier> <objects>
+                | monitor <knowable things>
+                | notify me <condition>
+                | offer to <simple actions>
+                | remind me to <entity event%conjugation 1>
+                | tell <entity> that <textbox('custom message')>
+                | tell me <knowable things>
+                | track <knowable things>
+
+
+<direct actions> = <direct action>
+                 | <direct action> and <additional action>
+
+
+<entity criteria> = enjoy
+                  | enjoys
+                  | has forgotten
+                  | has left <object state>
+                  | has lost
+                  | have forgotten
+                  | have left <object state>
+                  | have lost
+                  | like
+                  | likes
+                  | might like
+                  | need
+                  | needs
+                  | specifies
+                  | specify
+                  | suggest
+                  | suggests
+                  | would use
+
+
+<entity event%conjugation 1> = arrive
+                             | arrive home
+                             | come back home
+                             | come home
+                             | come home from being
+                             | come in
+                             | enter
+                             | get home
+                             | leave
+
+
+<entity event%conjugation 2> = arrives
+                             | arrives home
+                             | asks you to
+                             | comes back home
+                             | comes home
+                             | comes home from being
+                             | comes in
+                             | enters
+                             | gets home
+                             | leaves
+
+
+<entity event> = <identifier> cat <entity event%conjugation 2>
+               | <identifier> dog <entity event%conjugation 2>
+               | <textbox('custom name')> <entity event%conjugation 2>
+               | I <entity event%conjugation 1>
+               | he <entity event%conjugation 2>
+               | my boyfriend <entity event%conjugation 2>
+               | my brother <entity event%conjugation 2>
+               | my father <entity event%conjugation 2>
+               | my girlfriend <entity event%conjugation 2>
+               | my husband <entity event%conjugation 2>
+               | my mother <entity event%conjugation 2>
+               | my pet <entity event%conjugation 2>
+               | my roommate <entity event%conjugation 2>
+               | my sister <entity event%conjugation 2>
+               | my wife <entity event%conjugation 2>
+               | she <entity event%conjugation 2>
+               | you <entity event%conjugation 1>
+
+
+<entity fact> = I am <entity state>
+              | <entity%conjugation 2 concrete> is <entity state>
+
+
+<entity state> = anywhere in the house
+               | approaching the house
+               | approaching the car
+               | at the door
+               | away
+               | away from home
+               | close to returning home
+               | coming home
+               | coming home from work
+               | driving
+               | entering the house
+               | gone
+               | home
+               | in the house
+               | leaving
+               | leaving the house
+               | leaving for work
+               | not at home
+               | not home
+               | out of the house
+
+
+<entity%conjugation 1> = <identifier> children
+                       | <identifier> friends
+                       | <identifier> kids
+                       | I
+                       | my brothers
+                       | my in-laws
+                       | my parents
+                       | my pets
+                       | my roommates
+                       | my sisters
+                       | people
+                       | they
+                       | we
+                       | you
+
+
+<entity%conjugation 2> = <identifier> cat
+                       | <identifier> dog
+                       | <identifier> stranger
+                       | <textbox('custom name')>
+                       | an unidentified person
+                       | anyone
+                       | everyone
+                       | he
+                       | my boyfriend
+                       | my brother
+                       | my child
+                       | my family
+                       | my father
+                       | my girlfriend
+                       | my husband
+                       | my mother
+                       | my pet
+                       | my roommate
+                       | my sister
+                       | my wife
+                       | no one
+                       | nobody
+                       | she
+                       | someone
+                       | someone else
+
+<entity%conjugation 2 concrete> = <identifier> cat
+                       | <identifier> dog
+                       | <textbox('custom name')>
+                       | my boyfriend
+                       | my brother
+                       | my child
+                       | my family
+                       | my father
+                       | my girlfriend
+                       | my husband
+                       | my mother
+                       | my pet
+                       | my roommate
+                       | my sister
+                       | my wife
+                       
+
+
+
+<entity> = <identifier> cat
+         | <identifier> children
+         | <identifier> dog
+         | <identifier> fish
+         | <identifier> friends
+         | <identifier> kids
+         | <identifier> stranger
+         | <textbox('custom name')>
+         | I
+         | an unidentified person
+         | anyone
+         | everyone
+         | he
+         | her
+         | him
+         | me
+         | my boyfriend
+         | my brother
+         | my brothers
+         | my family
+         | my father
+         | my girlfriend
+         | my husband
+         | my in-laws
+         | my mother
+         | my parents
+         | my pet
+         | my pets
+         | my sister
+         | my sisters
+         | my wife
+         | no one
+         | nobody
+         | people
+         | she
+         | someone
+         | someone else
+         | them
+         | they
+         | us
+         | we
+         | you
+
+
+<environment change> = drops below <degrees c> degrees Celsius
+                     | drops below <degrees f> degrees Fahrenheit
+                     | falls below <degrees c> degrees Celsius
+                     | falls below <degrees f> degrees Fahrenheit
+                     | freezes
+                     | gets below <degrees c> degrees Celsius
+                     | gets below <degrees f> degrees Fahrenheit
+                     | gets dark
+                     | gets too cold
+                     | gets too hot
+                     | goes above <degrees c> degrees Celsius
+                     | goes above <degrees f> degrees Fahrenheit
+                     | happens
+                     | is happening
+                     | rains
+                     | reaches that temperature
+                     | snows
+                     | starts to get dark
+                     | storms
+
+
+<environment event> = it <environment change>
+
+
+<environment fact> = it is <environment state>
+                   | it is not <environment state>
+
+
+<environment state> = <clock time>
+                    | after <clock time>
+                    | afternoon
+                    | before <clock time>
+                    | below <degrees c> degrees Celsius
+                    | below <degrees f> degrees Fahrenheit
+                    | breakfast
+                    | bright out
+                    | cold
+                    | cool enough
+                    | daytime
+                    | dinner
+                    | evening
+                    | from <entity>
+                    | from work
+                    | hot
+                    | lunch
+                    | morning
+                    | night out
+                    | off
+                    | on
+                    | raining
+                    | snowing
+                    | summer
+                    | sunny out
+                    | sunrise
+                    | sunset
+                    | too cold
+                    | too hot
+                    | too warm
+                    | warm enough
+                    | winter
+
+
+<event> = <entity event>
+        | <object event>
+
+
+<events> = <event>
+         | <event> and <additional event>
+
+
+<fact> = <entity fact>
+       | <object fact>
+
+
+<facts> = <fact>
+        | <fact> and <additional fact>
+        | <fact> or <additional fact>
+
+
+<goal dependency> = for me to review
+                  | in order to <textbox('custom goal')>
+                  | in order to catch the bus
+                  | in order to lose weight
+                  | in order to save money
+                  | so that <textbox('custom reason')>
+
+
+<how am> = <entity>
+         | <entity> doing
+         | <entity> feeling
+
+
+<how are> = <entity>
+          | my vitals
+          | you
+
+
+<how can entity> = be healthier
+                 | conserve electricity
+                 | conserve energy
+                 | conserve gas
+                 | conserve resources
+                 | conserve water
+                 | cook a particular meal
+                 | improve <identifier> sleeping habits
+                 | reduce <identifier> costs
+                 | reduce <identifier> utility bills
+                 | reduce <identifier> utility usage
+                 | save money on utilities
+
+
+<how did> = I sleep last night
+
+
+<how far> = did I travel
+
+
+<how fast> = is <identifier> car going
+           | is <identifier> heart beating
+
+
+<how high> = is <identifier> blood pressure
+           | is <identifier> blood sugar
+           | is <identifier> heart rate
+
+
+<how is> = <entity>
+         | my blood pressure
+         | my blood sugar
+         | my exercise program going
+         | my heart rate
+         | my progress towards my weight goal
+         | the stock market
+         | the traffic
+         | the weather
+
+
+<how long> = have my washer and dryer been running
+           | long will the commute be
+
+
+<how many> = calories do I need to eat
+           | calories have I burned
+           | minutes do I need to exercise
+           | steps do I need to take
+           | steps have I taken
+
+
+<how much> = am I exercising right now
+           | am I paying for electricity
+           | am I paying for gas
+           | am I paying for utilities
+           | am I paying for water
+           | am I spending
+           | am I using of each utility
+           | could I save by reducing electricity consumption
+           | could I save by reducing gas consumption
+           | could I save by reducing water consumption
+           | do I weigh
+           | does each utility cost
+           | does electricity cost
+           | does gas cost
+           | does water cost
+           | electricity <relation> <identifier> <objects> consuming
+           | electricity am I using
+           | electricity do <entity> consume
+           | electricity does <entity> consume
+           | electricity has <entity> used
+           | electricity have <entity> used
+           | electricity have appliances used
+           | energy <relation> <identifier> <objects> consuming
+           | energy do <identifier> <objects> consume
+           | energy does <identifier> <objects> consume
+           | exercise did <entity> do
+           | exercise has <entity> done
+           | exercise have I done
+           | have I exercised historically
+           | money can I save if I <direct action>
+           | money is in my bank account
+           | money would I save if I <event>
+           | should <entity> exercise
+           | sleep did <entity> get
+           | sleep do I get
+           | traffic is there
+           | water do <entity> use
+           | will my bills be
+           | will my electricity cost
+
+
+<how question> = how am <how am>
+               | how anxious am I
+               | how are <how are>
+               | how can <entity> <how can entity>
+               | how did <how did>
+               | how dirty is the house
+               | how far <how far>
+               | how fast <how fast>
+               | how high <how high>
+               | how hot is it
+               | how is <how is>
+               | how long <how long>
+               | how many <how many>
+               | how much <how much>
+               | how well <how well>
+
+
+<how well> = did I sleep last night
+           | have I been sleeping
+           | have I been working out
+
+
+<identifier> = <location>
+             | a
+             | all
+             | an
+             | any
+             | each
+             | every
+             | hers
+             | his
+             | important
+             | my
+             | my current
+             | my favorite
+             | my next
+             | new
+             | one of my
+             | one of the
+             | our
+             | some
+             | that
+             | the
+             | the current
+             | the next
+             | their
+             | this
+
+
+<indirect reference phrase> = <indirect reference, such as: what, when, where, whether>
+                            | <indirect reference, such as: what, when, where, whether> <dependent clauses, such as: time, location, after>
+
+
+<indirect reference, such as: what, when, where, whether> = what <options for what>
+                                                                    | what the <options for what the>
+                                                                    | when <when reference>
+                                                                    | where <where reference>
+                                                                    | whether <whether reference>
+
+
+<indirect references, such as: what, when, where, whether> = <indirect reference phrase>
+                                                                     | <indirect reference phrase> and <additional indirect question>
+
+
+<knowable thing> = <indirect references, such as: what, when, where, whether>
+                 | if <statements>
+                 | when <statements>
+
+
+<knowable things> = <knowable thing>
+                  | <knowable thing> and <additional knowable thing>
+                  | <knowable thing> or <additional knowable thing>
+
+
+<location attribute> = bright
+                     | cold
+                     | dark
+                     | hot
+                     | loud
+                     | nearby
+                     | occupied
+                     | quiet
+                     | unoccupied
+                     | warm
+
+
+<location dependency> = <location phrase>
+                      | <location phrase> and <additional location>
+                      | <location phrase> or <additional location>
+
+
+<location phrase> = <location>
+                  | at <location>
+                  | for
+                  | for <location>
+                  | from <location>
+                  | in
+                  | in <identifier> <location attribute> <space>
+                  | in <location>
+                  | in <location> that <entity> in
+                  | in <location> that are <location attribute>
+                  | in <location> that is <location attribute>
+                  | out
+                  | to
+
+
+<location> = <identifier> <space>
+           | <space>
+
+
+<meal> = breakfast
+       | dinner
+       | lunch
+
+
+<music> = <textbox('genre')> music
+        | background music
+        | music
+        | music by <textbox('artist')>
+
+
+<nouns> = <objects>
+        | <objects> and <additional noun>
+
+
+<object behavior> = <environment event>
+                  | are closed
+                  | are opened
+                  | are shut
+                  | change
+                  | changes
+                  | close
+                  | closes
+                  | comes
+                  | comes in
+                  | comes on
+                  | comes through
+                  | end
+                  | ends
+                  | finish
+                  | finishes
+                  | go off
+                  | goes off
+                  | happen
+                  | happens
+                  | is broken into
+                  | is moved
+                  | is over
+                  | open
+                  | opens
+                  | pops up
+                  | ring
+                  | rings
+                  | shut
+                  | start
+                  | starts
+                  | stays <object state>
+                  | turn off
+                  | turn on
+                  | turns off
+                  | turns on
+
+
+<object event> = <identifier> <objects> <object behavior>
+               | <identifier> <singular update> <object behavior>
+
+
+<object fact> = <identifier> <objects> <relation> <object state>
+
+
+<object state> = <color>
+               | <power>
+               | <range(0,1000)>
+               | <range(2,60)> minutes away
+               | <temperature>
+               | <volume>
+               | a predefined setting
+               | about to come on
+               | above <degrees c> degrees Celsius
+               | above <degrees f> degrees Fahrenheit
+               | above-freezing temperatures
+               | activated
+               | arrived
+               | arriving
+               | automated
+               | available
+               | bad
+               | behaving strangely
+               | below <degrees c> degrees Celsius
+               | below <degrees f> degrees Fahrenheit
+               | bright
+               | broken
+               | clean
+               | closed
+               | cold
+               | cool
+               | dim
+               | dirty
+               | disabled
+               | done
+               | down
+               | drawing power
+               | enabled
+               | energy efficient
+               | finished
+               | good
+               | here
+               | high
+               | hot
+               | in need of maintenance
+               | in use
+               | is over
+               | late
+               | located
+               | locked
+               | lost
+               | loud
+               | moved
+               | my preferred settings
+               | near
+               | nice
+               | not drawing power
+               | not in use
+               | not locked
+               | not out
+               | occupied
+               | off
+               | on
+               | open
+               | opened
+               | out
+               | paid
+               | paused
+               | playing
+               | possible
+               | prepared
+               | problems
+               | quiet
+               | ready
+               | recorded
+               | ringing
+               | running
+               | running low
+               | scheduled
+               | secure
+               | secured
+               | tailored to my needs
+               | tailored to my preferences
+               | taken
+               | too high
+               | too low
+               | turned down
+               | turned off
+               | turned on
+               | unlocked
+               | unoccupied
+               | unusually high
+               | up
+               | updated
+               | warm
+
+
+<object> = <album>
+         | <location>
+         | <music>
+         | <online service>
+         | <playlist>
+         | <song>
+         | <television>
+         | <textbox('custom station')> radio station
+         | EEG headset
+         | Facebook status
+         | TV
+         | TV remote
+         | air
+         | air conditioner
+         | air conditioning
+         | alarm
+         | anything
+         | appliance
+         | appliances
+         | appointment
+         | appointments
+         | babysitter
+         | beer
+         | bills
+         | blinds
+         | blood pressure monitor
+         | breakfast
+         | bus
+         | car
+         | car keys
+         | channel
+         | clock
+         | clothes
+         | coffee
+         | coffee maker
+         | coffee pot
+         | command
+         | commute
+         | computer
+         | costs
+         | devices
+         | dinner
+         | dishwasher
+         | door
+         | door lock
+         | door locks
+         | doorbell
+         | doors
+         | dry cleaning
+         | dryer
+         | electricity
+         | electronics
+         | energy
+         | energy efficiency
+         | fan
+         | fans
+         | food
+         | game
+         | garage door
+         | gas
+         | glucose monitor
+         | groceries
+         | heart rate monitor
+         | heat
+         | heater
+         | home
+         | ingredients
+         | intrusion detection system
+         | it
+         | items
+         | keys
+         | laundry
+         | light
+         | lighting
+         | lights
+         | local news
+         | lock
+         | locks
+         | lunch
+         | mail
+         | media
+         | media library
+         | medication
+         | meeting
+         | motion sensors
+         | music library
+         | news
+         | objects
+         | outlet
+         | outlets
+         | oven
+         | phone
+         | pizza
+         | plumbing
+         | podcast
+         | power
+         | purse
+         | radio
+         | recipe
+         | refrigerator
+         | remote control
+         | results
+         | security alarm
+         | security lockdown
+         | security system
+         | sensors
+         | shower
+         | smartphone
+         | something
+         | something unusual
+         | speakers
+         | stereo
+         | storm
+         | stove
+         | sun
+         | system
+         | temperature
+         | temperatures
+         | thermostat
+         | things
+         | tracker
+         | traffic
+         | utilities
+         | video library
+         | washer
+         | washing machine
+         | watch
+         | water
+         | water heater
+         | ways to reduce costs
+         | weather
+         | window
+         | windows
+         | wine
+         | workout
+         | workout routine
+         | world news
+
+
+<objects> = <object>
+          | <object> and <additional object>
+          | <object> or <additional object>
+
+
+<online service> = Campfire
+                 | Dropbox
+                 | Evernote
+                 | Facebook
+                 | Facebook page
+                 | Foursquare
+                 | Gmail
+                 | Google Calendar
+                 | Google Drive
+                 | Instagram
+                 | Lyft
+                 | Pinterest
+                 | RSS feeds
+                 | Reddit
+                 | Slack
+                 | Twitter
+                 | Uber
+                 | YouTube
+                 | calendar
+                 | email
+                 | social network accounts
+                 | social networks
+                 | the news
+                 | the public transit authority
+
+
+<options for how I> = am feeling
+                    | can reduce my utility bills
+                    | feel
+                    | long I have left on my washer and dryer
+                    | slept last night
+
+
+<options for how high> = <identifier> <data sources> are
+                       | <identifier> <data sources> has been
+                       | <identifier> <data sources> have been
+                       | <identifier> <data sources> is
+
+
+<options for how long> = the commute will be
+
+
+<options for how many> = calories I need to eat today after my exercise routine
+                       | calories I've burned
+                       | minutes I need to exercise on my elliptical to eat three pieces of pepperoni pizza
+                       | steps I must take today if I eat 1500 calories and want to maintain my current weight
+                       | steps I've taken
+                       | steps I've taken through my day
+                       | steps I've walked in a day
+
+
+<options for how much I> = am spending every month
+                         | could save at slightly reduced levels
+                         | currently weigh
+                         | have exercised historically
+                         | sleep
+                         | slept
+                         | weigh
+                         | will be spending at current levels of electricity/heating/etc
+
+
+<options for how much electricity> = I am using
+                                   | I am using in my home
+                                   | I consume
+                                   | I have used this month
+                                   | I used
+                                   | all the appliances consume
+                                   | appliances have used
+                                   | gas and water is being consumed currently/is currently in use
+                                   | is being used
+                                   | they are currently using
+                                   | water and gas cost
+
+
+<options for how much> = am I exercising right now
+                       | are they currently consuming
+                       | energy
+                       | exercise I did this week
+                       | exercise I have done total
+                       | gas it is consuming
+                       | it costs
+                       | money I can save
+                       | money is in my bank account
+                       | my total bills will be this month
+                       | of each utility I am using at any given time
+                       | the cost of my electricity will be so far this month
+                       | water and electricity I am using
+                       | water and gas that I am using
+
+
+<options for how to> = <simple action>
+                     | be healthier
+                     | clean
+                     | cook a certain recipe
+                     | improve my sleeping habits
+                     | make a particular meal
+                     | reduce cost
+                     | save money on <utility> usage in my home
+
+
+<options for how> = <entity> is doing
+                  | anxious I am feeling right now
+                  | cold and hot it is
+                  | dirty the house is
+                  | fast it is going
+                  | hot it is in the room
+                  | the traffic is
+                  | the weather will be today
+                  | well I have been <activity>
+
+
+<options for what I> = am doing
+                     | can cook
+                     | eat
+                     | have on my schedule
+                     | have used up in the pantry
+                     | like
+                     | might need to get at the store
+                     | say I am going to do
+                     | want
+                     | watch on TV
+                     | weigh
+
+
+<options for what identifier> = <data sources> is
+                              | <data sources> is for <entity>
+                              | <entity> are doing
+                              | <entity> do during the day
+                              | <entity> does during the day
+                              | <entity> is doing
+                              | exercise program is
+                              | mood is
+
+
+<options for what is> = causing illness
+                      | in my refrigerator for me to eat
+                      | in the refrigerator
+                      | new on <online service>
+                      | out of stock
+
+
+<options for what the> = humidity is
+                       | temperature is
+
+
+<options for what> = <object> <relation> <object state>
+
+
+<percent> = <range(0,100)>%
+
+
+<personal organizers> = Google Calendar
+                      | calendar
+                      | daily reminders
+                      | grocery list
+                      | lists
+                      | preferences
+                      | schedule
+                      | to-do list
+
+
+<playlist> = <textbox('description or name')> playlist
+           | playlist <textbox('playlist name')>
+
+
+<plural updates> = <online service> alerts
+                 | <online service> messages
+                 | <online service> updates
+                 | alerts
+                 | chat messages
+                 | email notifications
+                 | emails
+                 | important messages
+                 | message notifications
+                 | messages
+                 | new <online service> messages
+                 | new emails
+                 | new messages
+                 | new voicemails
+                 | news alerts
+                 | news updates
+                 | notifications
+                 | phone calls
+                 | social media alerts
+                 | social media updates
+                 | suggestions
+                 | text messages
+                 | texts
+                 | things
+                 | transportation alerts
+                 | updates
+                 | updates on the forecast
+                 | voicemails
+                 | weather alerts
+
+
+<power> = <percent> brightness
+        | <percent> power
+        | <step> brightness
+        | <step> power
+        | bright
+        | dim
+
+
+<question about data> = are <identifier> <data sources> <data state>
+                      | is <identifier> <data sources> <data state>
+
+
+<question about entity> = am I <entity state>
+                        | are <entity> <entity state>
+                        | is <entity> <entity state>
+
+
+<question about environment> = is it <environment state>
+
+
+<question about object> = are <identifier> <objects> <object state>
+                        | are <identifier> <objects> forecast to be <object state>
+                        | has <identifier> <objects> been <object state>
+                        | have <identifier> <objects> been <object state>
+                        | is <identifier> <objects> <object state>
+                        | is <identifier> <objects> forecast to be <object state>
+                        | was <identifier> <objects> <object state>
+                        | were <identifier> <objects> <object state>
+
+
+<question about update> = are there <identifier> <plural updates>
+                        | are there <identifier> <plural updates> from <entity>
+                        | are there <identifier> <plural updates> from <online service>
+                        | are there <identifier> <plural updates> from work
+                        | is there <identifier> <singular update>
+                        | is there <identifier> <singular update> from <entity>
+                        | is there <identifier> <singular update> from <online service>
+                        | is there <identifier> <singular update> from work
+
+
+<question phrase> = <question>
+                  | <question> <dependent clauses, such as: time, location, after>
+
+
+<question sentence> = <question phrase>
+                    | <question phrase> and <additional question>
+
+
+<question> = <question about object>
+           | <what question>
+           | <when question>
+           | <where question>
+
+
+<relation> = are
+           | are estimated to be
+           | are forecast to be
+           | are not
+           | are not estimated to be
+           | are not forecast to be
+           | can be
+           | cannot be
+           | do not have
+           | does not have
+           | does not need to be
+           | does not seem to be
+           | does not seem to have
+           | has
+           | have
+           | have been
+           | have not been
+           | is
+           | is estimated to be
+           | is forecast to be
+           | is not
+           | is not estimated to be
+           | is not forecast to be
+           | is not set at
+           | is set at
+           | need to be
+           | seems to be
+           | seems to have
+           | was
+           | was not
+           | were
+           | were not
+
+
+<season> = fall
+         | spring
+         | summer
+         | winter
+
+
+<sentence> = <action sentence>.
+           | <question sentence>?
+
+
+<simple action> = <verb> <identifier> <objects>
+                | <verb> <identifier> <objects> <state phrase>
+
+
+<simple actions> = <simple action>
+                 | <simple action> and <simple action>
+
+
+<singular update> = alert
+                  | email
+                  | mail
+                  | message
+                  | new email
+                  | new mail
+                  | new message
+                  | new text message
+                  | notification
+                  | phone call
+                  | physical mail
+                  | text message
+                  | update
+                  | voicemail
+
+
+<song> = song
+       | song <textbox('song title')>
+       | song <textbox('song title')> by <textbox('artist')>
+       | song by <textbox('artist')>
+
+
+<source> = <indirect reference, such as: what, when, where, whether>
+         | <indirect reference, such as: what, when, where, whether> and <additional source>
+         | <indirect reference, such as: what, when, where, whether> but not <additional source>
+         | <indirect reference, such as: what, when, where, whether> or <additional source>
+
+
+<space> = attic
+        | basement
+        | bathroom
+        | bedroom
+        | cellar
+        | closet
+        | den
+        | dining room
+        | door
+        | family room
+        | foyer
+        | game room
+        | garage
+        | garden
+        | guest bathroom
+        | guest bedroom
+        | gym
+        | hall
+        | home
+        | house
+        | household
+        | inside
+        | kitchen
+        | laundry room
+        | library
+        | living room
+        | master bedroom
+        | mud room
+        | nursery
+        | office
+        | outside
+        | pantry
+        | parlor
+        | porch
+        | room
+        | rooms
+        | school
+        | sunroom
+        | washroom
+        | work
+        | yard
+
+
+<state phrase> = <object state>
+               | at <object state>
+               | of <data sources>
+               | that says <textbox('custom message')>
+               | to <entity>
+               | to <entity> that says <textbox('custom message')>
+               | to <object state>
+               | to my <personal organizers>
+               | to say <textbox('custom message')>
+
+
+<statement> = <event>
+            | <event> <dependent clauses, such as: time, location, after>
+            | <fact>
+            | <fact> <dependent clauses, such as: time, location, after>
+
+
+<statements> = <statement>
+
+
+<states> = <state phrase>
+         | <state phrase> and <additional state>
+
+
+<step> = full
+       | half
+       | high
+       | low
+       | medium
+       | mid
+
+
+<television> = <textbox('TV show genre')> show
+             | <textbox('TV show')>
+             | <textbox('film genre')>
+             | <textbox('film genre')> movie
+             | <textbox('movie title')>
+             | movie
+             | movies
+             | show
+             | shows
+             | television
+             | video
+             | videos
+
+
+<temperature> = at <degrees c> degrees Celsius
+              | at <degrees f> degrees Fahrenheit
+              | cold
+              | cool
+              | hot
+              | optimal temperatures
+              | to <degrees c> degrees Celsius
+              | to <degrees f> degrees Fahrenheit
+              | warm
+
+
+<time dependency> = <time>
+                  | <time> and <additional time>
+
+
+<time unit> = <season>
+            | afternoon
+            | day
+            | days
+            | evening
+            | hour
+            | hours
+            | minute
+            | minutes
+            | month
+            | months
+            | morning
+            | night
+            | second
+            | seconds
+            | week
+            | weeks
+            | year
+            | years
+
+
+<time> = at <clock time>
+       | at certain times
+       | at night
+       | at that time
+       | breakfast
+       | currently
+       | daily
+       | dark
+       | dinnertime
+       | during the <time unit>
+       | dusk
+       | each <time unit>
+       | every <time unit>
+       | for <clock time>
+       | for <identifier> <time unit>
+       | for today
+       | for tomorrow
+       | from <clock time> to <clock time>
+       | in <range(1,60)> <time unit>
+       | in <season>
+       | last <time unit>
+       | lunchtime
+       | monthly
+       | next <time unit>
+       | nightly
+       | right now
+       | sunrise
+       | sunset
+       | this <time unit>
+       | today
+       | tomorrow
+       | tonight
+       | weekly
+       | yearly
+
+
+<units> = beats per minute
+        | calories
+        | days
+        | degrees
+        | dollars
+        | gallons
+        | hours
+        | levels
+        | minutes
+        | percent
+        | pounds
+        | steps
+        | watts
+
+
+<unless> = unless <statements>
+
+
+<until> = for <range(1,60)> <time unit>
+        | until <statements>
+        | until <time>
+
+
+<update event> = <identifier> kids have <updates>
+               | I have <updates>
+               | my boyfriend has <updates>
+               | my husband has <updates>
+               | my sister has <updates>
+               | somebody has <updates>
+               | they have <updates>
+               | we have <updates>
+
+
+<update fact> = there are <identifier> <plural updates>
+              | there are <identifier> <plural updates> from <entity>
+              | there are <identifier> <plural updates> from <online service>
+              | there are <identifier> <plural updates> from work
+              | there are no <plural updates>
+              | there are no <plural updates> from <entity>
+              | there are no <plural updates> from <online service>
+              | there are no <plural updates> from work
+              | there is <identifier> <singular update>
+              | there is <identifier> <singular update> from <entity>
+              | there is <identifier> <singular update> from <online service>
+              | there is <identifier> <singular update> from work
+              | there is anything
+              | there is anything from <entity>
+              | there is anything from <online service>
+              | there is anything from work
+              | there is no <singular update>
+              | there is no <singular update> from <entity>
+              | there is no <singular update> from <online service>
+              | there is no <singular update> from work
+              | there is nothing
+              | there is nothing from <entity>
+              | there is nothing from <online service>
+              | there is nothing from work
+
+
+<updates> = <plural updates>
+          | <range(2,60)> minutes until the bus arrives
+          | <singular update>
+
+
+<utility> = electricity
+          | energy
+          | gas
+          | power
+          | utility
+          | water
+
+
+<verb> = access
+       | act as
+       | activate
+       | add
+       | adjust
+       | allow
+       | answer
+       | boot up
+       | brew
+       | brighten
+       | bring up
+       | calculate
+       | call
+       | call <entity>
+       | cancel
+       | change
+       | clean
+       | close
+       | compile
+       | connect to
+       | conserve
+       | contact <entity>
+       | control
+       | cook
+       | cool
+       | crank down
+       | crank up
+       | create
+       | customize
+       | cut off
+       | cut on
+       | decrease
+       | detect
+       | dim
+       | disable
+       | dispense
+       | display
+       | draw
+       | drop
+       | email <entity>
+       | enable
+       | feed
+       | figure out
+       | find
+       | finish
+       | follow
+       | heat
+       | heat up
+       | hold
+       | improve
+       | increase
+       | keep track of
+       | let
+       | light up
+       | list
+       | locate
+       | lock
+       | log me out of
+       | log onto
+       | look at
+       | look up
+       | lose
+       | lower
+       | maintain
+       | make
+       | manage
+       | measure
+       | monitor
+       | offer me
+       | open
+       | operate
+       | order
+       | order me
+       | pause
+       | pay
+       | perform
+       | personalize
+       | plan
+       | play
+       | post to
+       | preheat
+       | prepare
+       | program
+       | provide
+       | pull up
+       | put on
+       | queue up
+       | raise
+       | randomly turn off
+       | randomly turn on
+       | read
+       | read aloud
+       | read me
+       | record
+       | reduce
+       | regulate
+       | remember
+       | reply to
+       | report
+       | request
+       | respond to
+       | resume
+       | ring
+       | run
+       | schedule
+       | secure
+       | select
+       | send <entity>
+       | set
+       | set up
+       | shut
+       | shut down
+       | shut off
+       | sing
+       | soften
+       | sound
+       | start
+       | stop
+       | suggest
+       | switch
+       | switch off
+       | switch on
+       | sync
+       | tailor
+       | text
+       | track
+       | turn
+       | turn down
+       | turn off
+       | turn on
+       | turn up
+       | unlock
+       | update
+       | use
+       | vibrate
+       | warm
+       | warm up
+
+
+<volume> = <percent> volume
+         | <step> volume
+
+
+<what question> = what <objects> <relation> <object state>
+                | what color are the lights
+                | what color is the light
+
+
+<when question> = when are <identifier> <objects> <object state>
+                | when did <identifier> <objects> <object event>
+                | when is <identifier> <objects> <object state>
+                | when was <identifier> <objects> <object state>
+                | when were <identifier> <objects> <object state>
+                | when will <identifier> <objects> <object event>
+                | when will <identifier> <objects> be <object state>
+
+
+<when reference> = <statements>
+
+
+<where question> = where is <identifier> <objects>
+
+
+<where reference> = <identifier> <objects> are
+                  | <identifier> <objects> is
+                  | it is
+
+
+<whether reference> = <statements>
+
+
+<while> = while the system is in <mode> mode
+
+<mode> = away 
+       | home
+       | night
+       | <textbox('custom mode...')>
+
+
+<who question> = who are my new messages from
+               | who has a birthday
+               | who is <entity state>
+
+
+<who reference> = is <entity state>
+                | was <entity state>
+
+

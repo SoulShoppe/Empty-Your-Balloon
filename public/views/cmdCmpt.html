@@ -1,0 +1,39 @@
+<span class="rule-components {{activeClass()}}">
+  <cmd-lit ng-if="cmpt.cmpType == 'lit'" 
+           cmpt="cmpt" 
+           active-ind="activeInd"
+           index="{{indexStr}}" 
+           click-leaf="clickLeaf({ind: ind})">
+  </cmd-lit> 
+  <cmd-hol ng-if="cmpt.cmpType == 'hol'" 
+           cmpt="cmpt" 
+           active-ind="activeInd"
+           index="{{indexStr}}" 
+           click-leaf="clickLeaf({ind: ind})">
+  </cmd-hol>
+  <cmd-inst ng-if="cmpt.cmpType == 'inst'" 
+            cmpt="cmpt" 
+           parentdd="parentdd"
+           active-ind="activeInd"
+            index="{{indexStr}}" 
+            click-leaf="clickLeaf({ind: ind})">
+  </cmd-inst>
+  <cmd-rng ng-if="cmpt.cmpType == 'rng'" 
+           cmpt="cmpt" 
+           active-ind="activeInd"
+           index="{{indexStr}}" 
+           click-leaf="clickLeaf({ind: ind})">
+  </cmd-rng>
+  <cmd-txtbx ng-if="cmpt.cmpType == 'txtbx'" 
+             cmpt="cmpt" 
+             active-ind="activeInd"
+             index="{{indexStr}}" 
+             click-leaf="clickLeaf({ind: ind})">
+  </cmd-txtbx>
+  <cmd-time ng-if="cmpt.cmpType == 'time'" 
+             cmpt="cmpt" 
+             active-ind="activeInd"
+             index="{{indexStr}}" 
+             click-leaf="clickLeaf({ind: ind})">
+  </cmd-time>
+</span>

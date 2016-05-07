@@ -1,0 +1,59 @@
+<!-- Message --> 
+  <div class="message {{messageLevel}}">{{message}}</div>
+<!-- Base Data Input --> 
+  <h1> Base Data Format </h1>
+  <textarea class="input large-text lined"
+        ng-model="rawText">
+  </textarea>
+  <div class="separator"></div>  
+<!-- Buttons For Inclusion / Syntax Errors -->
+   <input type="button" 
+          title=""
+          value="Insert Into Grammar" 
+          ng-click="parseRaw(rawText)"
+          class='button parser'>
+    </input>
+  <div class="separator"></div>  
+  <pre class="errors"> {{rawErrors}} </pre> 
+  <div class="separator"></div>  
+<!-- Grammar View  --> 
+  <h1> Easy Grammar Format </h1> 
+  <textarea
+        class="input large-text lined"
+        ng-model="grammarText">
+  </textarea>
+  <div class="separator"></div>  
+<!-- Grammar Buttons / Syntax Errors  --> 
+  <input type="button" 
+          title=""
+          value="Normalize Grammar / Commit Changes"
+          ng-click="parseGrammar(grammarText);refreshGrammar()"
+          class='button parser'>
+  </input>
+  <input type="button" 
+          title=""
+          value="Update Complete Grammar / Commit Changes"
+          ng-click="parseGrammar(grammarText)"
+          class='button parser'>
+  </input>
+  <div class="separator"></div>  
+  <pre class="errors"> {{grammarErrors}} </pre> 
+  <div class="separator"></div>  
+<!-- JSON Output --> 
+  <h1> PSM JSON Format </h1> 
+  <pre class="errors"> {{PSMJsonErrors}} </pre> 
+  <div class="separator"></div>  
+  <textarea
+        class="input large-text lined"
+        ng-model="PSMJsonText">
+  </textarea>
+  <div class="separator"></div> 
+  <input type="button" 
+          title=""
+          value="Update Complete Grammar / Commit Changes"
+          ng-click="parseJSON(PSMJsonText)"
+          class='button parser'>
+  </input>
+  <div class="separator"></div>  
+  <json obj='PSMJson'></json>
+<!-- --> 

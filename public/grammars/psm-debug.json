@@ -1,0 +1,81 @@
+{
+   "application0": {
+      "RHS": "application",
+      "LHS": [
+         "<sentence>",
+         "<sentence> <additional sentence>"
+      ]
+   },
+   "additional sentence1": {
+      "RHS": "additional sentence",
+      "LHS": [
+         "<application>"
+      ]
+   },
+   "sentence2": {
+      "RHS": "sentence",
+      "LHS": [
+         "<action sentence>.",
+         "<question sentence>?"
+      ]
+   },
+   "action sentence3": {
+      "RHS": "action sentence",
+      "LHS": [
+         "<action>",
+         "<action> and <additional action>"
+      ]
+   },
+   "additional action4": {
+      "RHS": "additional action",
+      "LHS": [
+         "<action sentence>"
+      ]
+   },
+   "action5": {
+      "RHS": "action",
+      "LHS": [
+         "<conditional action set phrase>",
+         "<conditional action set phrase> <unless>",
+         "<direct action set phrase>",
+         "<direct action set phrase> <unless>"
+      ]
+   },
+   "question sentence6": {
+      "RHS": "question sentence",
+      "LHS": [
+         "<question phrase>",
+         "<question phrase> and <additional question>"
+      ]
+   },
+   "additional question7": {
+      "RHS": "additional question",
+      "LHS": [
+         "<question sentence>"
+      ]
+   },
+   "direct action set phrase8": {
+      "RHS": "direct action set phrase",
+      "LHS": [
+         "turn on the lights"
+      ]
+   },
+   "conditional action set phrase9": {
+      "RHS": "conditional action set phrase",
+      "LHS": [
+         "come with me if you want to live"
+      ]
+   },
+   "question phrase10": {
+      "RHS": "question phrase",
+      "LHS": [
+         "are you my mommy"
+      ]
+   },
+   "unless11": {
+      "RHS": "unless",
+      "LHS": [
+         "unless I'm cooler than you"
+      ]
+   }
+}

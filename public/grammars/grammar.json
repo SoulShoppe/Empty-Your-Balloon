@@ -1,0 +1,74 @@
+{ 
+  "applications": {
+	  "RHS": "application",
+	  "LHS": ["<action_phrase>"]
+	},
+  "action_phrases": {
+	  "RHS": "action_phrase",
+	  "LHS": ["<action> <additional_action>"]
+	},
+	"additional_actions": {
+    "RHS": "additional_action",
+	  "LHS": ["and <action_phrase>", ""]
+	},
+  "actions": {
+	  "RHS": "action",
+	  "LHS": ["<direct_action>"]
+	},
+  "direct_actions": {
+	  "RHS": "direct_action",
+	  "LHS": [ "<verb> <object> <state%?> <timerange>"]
+	},
+  "state?s":{
+    "RHS": "state%?",
+    "LHS": ["<state>",""]
+  },
+  "verbs": {
+	  "RHS": "verb",
+	  "LHS": ["turn", "turn on", "turn off", "make", "play", "set"]
+	},
+  "identifiers": {
+	  "RHS": "identifier",
+	  "LHS": ["the", "the house", "the living room", "the bathroom", "some", "the current", "any"]
+	},
+  "Objects": {
+    "RHS": "object",
+    "LHS": ["<identifier> <noun>"]
+  },
+	"nouns": {
+    "RHS": "noun",
+	  "LHS": ["light", "lights", "music", "<textbox('Insert a noun here')>"]
+	},
+  "states": {
+	  "RHS": "state",
+	  "LHS": ["on", "off", "<color>", "to <color>", "to <power>", "at <power>", "at <volume>", "to <temperature>"]
+	},
+  "colors": {
+	  "RHS": "color",
+	  "LHS": ["blue", "hot pink"]
+	},
+  "powers": {
+	  "RHS": "power",
+	  "LHS": ["<step> power", "<step> brightness", "<percent> power", "<percent> brightness", "dim", "bright"]
+	},
+  "steps": {
+	  "RHS": "step",
+	  "LHS": ["low", "mid", "high", "full"]
+	},
+  "percentages":{
+	  "RHS": "percent",
+	  "LHS": ["<range(0,100)>%"]
+	},
+  "volumes": {
+	  "RHS": "volume",
+	  "LHS": ["<step> volume", "<percent> volume"]
+	},
+  "temperatures": {
+	  "RHS": "temperature",
+	  "LHS": ["warm", "cool", "hot", "cold", "<range(-40,212,70)> degrees Fahrenheit", "<range(-40,100,20)> degrees Celsius"]
+	},
+  "timeRange": {
+    "RHS": "timerange",
+    "LHS": ["from <time()> to <time()>",""]
+  }
+}

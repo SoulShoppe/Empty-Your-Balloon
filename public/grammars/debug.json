@@ -1,0 +1,14 @@
+{ 
+  "applications": {
+	  "RHS": "application",
+	  "LHS": ["<speech>","<percent>"]
+	},
+  "percentages":{
+	  "RHS": "percent",
+	  "LHS": ["<range(0,100)>%"]
+	},
+  "speeches":{
+    "RHS": "speech",
+    "LHS": ["<textbox('default')>"]
+  }
+}
