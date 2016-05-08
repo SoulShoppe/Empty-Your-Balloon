@@ -2,6 +2,7 @@
 
 angular.module('EYBA.BaseView', [
     'ngRoute',
+    'dragAndDrop',
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -224,10 +225,35 @@ angular.module('EYBA.BaseView', [
     restrict: 'E',
     template:
         "How have you leaked emotions?"
+      + "<img ng-repeat='image in images' ng-src='images/instructions/{{image}}' drag drag-model='image'></img>" 
       + "<button ng-click=\"toHelpState()\">Finished</button>"
+    , 
+    controller: ['$scope', function ($scope){ 
+      $scope.images = ['excluding.png','gossip_tear.png','pushing.png','disrespectful.png']
+    }]
   };
 }])
 
+// The directive for the right column of the "what have you leaked" state
+.directive('binLeaked', [function (){
+  return {
+    restrict: 'E',
+    template:
+        "<div drop drop-callback='onDropLeak'>"
+      +   " Drag target"
+      +   "<img ng-repeat='image in images' ng-src='images/instructions/{{image}}'></img>" 
+      + "</div>"
+    , 
+    controller: ['$scope','$log', function ($scope,$log){ 
+      $scope.images = []
+      $scope.onDropLeak = function(leaked) { 
+        $scope.images += [leaked.clone]
+        $log.debug("dropped " + leaked)
+      }
+    }]
+
+  };
+}])
 // The directive for the right column of the "what have you leaked" state
 .directive('colHelp', [function (){
   return {
@@ -297,14 +323,6 @@ angular.module('EYBA.BaseView', [
   };
 }])
 
-// The directive for the right column of the "what have you leaked" state
-.directive('binLeaked', [function (){
-  return {
-    restrict: 'E',
-    template:
-        "Leaked emotion drag target"
-  };
-}])
 
 // The directive for the balloon itself
 .directive('balloon', [function (){
