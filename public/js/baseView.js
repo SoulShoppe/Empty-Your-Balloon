@@ -2,7 +2,7 @@
 
 angular.module('EYBA.BaseView', [
     'ngRoute',
-	'crossfade'
+	'background'
 ])
 
 .config(['$routeProvider', function($routeProvider) {

@@ -2,7 +2,7 @@
 
 angular.module('crossfade', [])
 
-.directive('crossfade', ['$animate', function ($animate) {
+.directive('crossfade', function () {
 	return {
 		templateUrl: 'views/crossfade.html',
 		link: function(scope, element, attrs) {
@@ -10,11 +10,14 @@ angular.module('crossfade', [])
 				var secondary = scope.secondary = scope.primary;
 				var primary = scope.primary = scope.primary === scope.a? scope.b : scope.a;
 				
-				primary.$.addClass('fading');
-				primary.$.fadeIn(700, function() {
-					secondary.$.hide();
-					primary.$.removeClass('fading');
-				})
+				primary.$
+					.addClass('fading')
+					.detach()
+					.insertAfter(secondary.$)
+					.fadeIn(700, function() {
+						secondary.$.hide();
+						primary.$.removeClass('fading');
+					})
 			}
 			
 			function setSrc(src) {
@@ -38,4 +41,4 @@ angular.module('crossfade', [])
 			scope.$watch('src', setSrc);
 		}
 	};
-}]);
+});
